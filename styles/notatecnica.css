@@ -72,18 +72,65 @@ header {
     transition: transform 0.3s ease;
 }
 
+.voltar {
+    background-color: #048D3E;
+    width: clamp(150px, 15vw, 200px);
+    height: 50px;
+    border: 5px solid #048D3E;
+    border-radius: 10px;
+    margin: 0;
+    margin-right: calc((100% - min(1500px, 90vw)) / 2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: clamp(24px, 2vw, 32px);
+    margin-bottom: 20px;
+    position: relative;
+    right: 20px;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+
+.nota-icone {
+    width: 60px;
+    margin-right: 8px; 
+    vertical-align: middle;
+}
+
+.botoes {
+    display: flex;
+    justify-content: space-between;
+    width: min(1500px, 90vw);
+    margin: 0 auto 20px;
+}
+
 .quadro {
     width: min(1500px, 90vw);
     min-height: 500px;
+    max-height: 500px;
     border: 5px solid #048d3d75;
     border-radius: 10px;
     margin: 0 auto 40px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    gap: 10px; 
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.nota-item {
+    display: flex;
     align-items: center;
-    gap: clamp(50px, 10%, 200px);
-    flex-wrap: wrap;
-    padding: 20px;
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+
 }
 
 .data:hover{
@@ -92,29 +139,20 @@ header {
     color: #048D3E;
 }
 
-.quadro {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 30px;
-    overflow-y: auto;
-    max-height: 60vh;
+.voltar:hover{
+    transform: scale(1.05);
+    background: white;
+    color: #048D3E;
 }
 
-.nota-item {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    padding: 15px;
-    background-color: #f8f8f8;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-}
-
-.nota-item:hover {
-    background-color: #e9ecef;
+.nota-item:hover{
     transform: translateX(5px);
 }
+
+.nota-item:hover .nota-link {
+    font-weight: bold;
+}
+
 
 .nota-icone {
     margin-right: 15px;
@@ -129,10 +167,6 @@ header {
     word-break: break-word;
 }
 
-.nota-link:hover {
-    text-decoration: underline;
-}
-
 .sem-documentos, .erro-carregamento {
     text-align: center;
     padding: 20px;
@@ -145,7 +179,6 @@ header {
     color: #dc3545;
 }
 
-/* Barra de rolagem personalizada */
 .quadro::-webkit-scrollbar {
     width: 10px;
 }
