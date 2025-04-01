@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             
             const icone = document.createElement('img');
             icone.className = 'nota-icone';
-            icone.src = '/icon4.svg';
+            icone.src = '/icon5.svg';
             icone.alt = 'Ícone de pasta';
             
             item.appendChild(icone);
