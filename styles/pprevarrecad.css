@@ -72,7 +72,28 @@ header {
     transition: transform 0.3s ease;
 }
 
-.voltar {
+.voltar{
+    background-color: #048D3E;
+    width: clamp(150px, 15vw, 200px);
+    height: 50px;
+    border: 5px solid #048D3E;
+    border-radius: 10px;
+    margin: 0;
+    margin-right: calc((100% - min(1500px, 90vw)) / 2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: clamp(24px, 2vw, 32px);
+    margin-bottom: 20px;
+    position: relative;
+    right: 20px;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+
+.voltarp{
     background-color: #048D3E;
     width: clamp(150px, 15vw, 200px);
     height: 50px;
@@ -140,6 +161,12 @@ header {
 }
 
 .voltar:hover{
+    transform: scale(1.05);
+    background: white;
+    color: #048D3E;
+}
+
+.voltarp:hover{
     transform: scale(1.05);
     background: white;
     color: #048D3E;

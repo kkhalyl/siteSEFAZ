@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', async () => {
     const quadro = document.querySelector('.quadro');
-    let todosDocumentos = []; // Armazenará todos os documentos carregados
+    const voltar = document.querySelector('.voltar');
+    const voltarp = document.querySelector('.voltarp');
+
+    let todosDocumentos = []; 
 
     try {
         const response = await fetch('/api/prevarrecad');
@@ -27,8 +30,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Função para mostrar as pastas/meses
     function mostrarPastas(documentos) {
         quadro.innerHTML = '';
+
+        voltar.style.display = 'flex';
+        voltarp.style.display = 'none';
         
-        // Extrai meses únicos
+    
         const mesesUnicos = [];
         const mesesVistos = new Set();
         
@@ -73,6 +79,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Função para mostrar arquivos de um mês específico
     function mostrarArquivosDoMes(mesNum) {
         quadro.innerHTML = '';
+
+        voltar.style.display = 'none';
+        voltarp.style.display = 'flex';
+
+        voltarp.addEventListener("click", function() {
+            mostrarPastas(todosDocumentos)
+        });
 
         // Filtra documentos do mês selecionado
         const documentosDoMes = todosDocumentos.filter(nota => nota.mesNum === mesNum);
