@@ -2,7 +2,7 @@
 
 Este repositório contém o código de uma aplicação web fictícia desenvolvida com fins acadêmicos e pessoais. O projeto simula a estrutura de um site da Secretaria da Fazenda, com foco em clareza na apresentação de informações, usabilidade e boas práticas de desenvolvimento full stack.
 
-> *Atenção:* Este projeto não utiliza dados reais nem contém qualquer vínculo com a SEFAZ. É apenas uma aplicação fictícia criada para fins de estudo.
+> *Atenção:* Este projeto não utiliza dados reais nem contém qualquer vínculo com a SEFAZ. É apenas uma aplicação criada para fins de estudo.
 
 ## Objetivos
 
