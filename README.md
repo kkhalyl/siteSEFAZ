@@ -29,16 +29,16 @@ Este repositório contém o código de uma aplicação web fictícia desenvolvid
 
 - Acesse a pasta do projeto:
 
-cd siteSEFAZ
+```cd siteSEFAZ
 
 - Instale as dependências:
 
-npm install
+```npm install
 
 - Inicie o servidor:
 
-node server.js
+```node server.js
 
 - Acesse no navegador:
 
-http://localhost:3000
+```http://localhost:3000
