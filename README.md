@@ -24,3 +24,21 @@ Este repositório contém o código de uma aplicação web fictícia desenvolvid
 
 ### Outros
 - npm (gerenciamento de pacotes)
+
+## Como Executar
+
+- Acesse a pasta do projeto:
+
+cd siteSEFAZ
+
+- Instale as dependências:
+
+npm install
+
+- Inicie o servidor:
+
+node server.js
+
+- Acesse no navegador:
+
+http://localhost:3000
